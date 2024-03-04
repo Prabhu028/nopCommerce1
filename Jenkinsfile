@@ -13,6 +13,7 @@ pipeline{
                 sh'dotnet publish -c Release src/Presentation/Nop.Web/Nop.Web.csproj -o publish'
                 sh'mkdir -p publish/bin publish/logs'
                 sh'zip -r nopCommerce.zip publish'
+                archive '**/nopCommerce.zip'
             }
         }  
     }
